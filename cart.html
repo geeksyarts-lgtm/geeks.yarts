@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GEEKS & YARTS | Shopping Cart</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            GEEKS <span>&</span> YARTS
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="cart.html">Add to Cart</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- CART -->
+
+    <section class="cart-section">
+
+        <h2 class="section-title">
+            YOUR SHOPPING CART
+        </h2>
+
+        <div class="cart-box">
+
+            <p id="empty-cart">
+                Your cart is currently empty.
+            </p>
+
+            <div id="cart-items"></div>
+
+            <h3 id="cart-total">
+                Total: $0
+            </h3>
+
+            <input type="email"
+            id="customer-emmail"
+            placeholder="Your email"
+
+            input type="text"
+            id="customer-phone"
+            placeholder="phone Number">
+
+            <input type="text"
+            id="customer-address"
+            placeholder="delivery-address">
+
+            <button onclick="placeOrder()">
+                ORDER NOW
+            </button>
+            
+            <button onclick="clearCart()">
+                CLEAR CART
+            </button>
+     </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="logo">
+            GEEKS <span>&</span> YARTS
+        </div>
+
+        <p>
+            Quality products. Simple shopping.
+        </p>
+
+        <p>
+            © 2026 GEEKS & YARTS. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        var cart = JSON.parse(
+            localStorage.getItem("cart")
+        ) || [];
+
+        var cartItems = document.getElementById("cart-items");
+        var emptyCart = document.getElementById("empty-cart");
+        var cartTotal = document.getElementById("cart-total");
+
+        var total = 0;
+
+
+        if (cart.length > 0) {
+
+            emptyCart.style.display = "none";
+
+            cart.forEach(function(item, index) {
+
+                var itemBox = document.createElement("div");
+
+                itemBox.className = "cart-item";
+
+                itemBox.innerHTML =
+                    "<h3>" + item.name + "</h3>" +
+                    "<p>" + item.price + "</p>" +
+                    "<button onclick='removeItem(" + index + ")'>" +
+                    "REMOVE" +
+                    "</button>";
+
+                cartItems.appendChild(itemBox);
+
+                total += parseFloat(
+                    item.price.replace("$", "")
+                );
+
+            });
+
+        }
+
+
+        cartTotal.innerHTML =
+            "Total: $" + total.toFixed(2);
+
+
+        function removeItem(index) {
+
+            cart.splice(index, 1);
+
+            localStorage.setItem(
+                "cart",
+                JSON.stringify(cart)
+            );
+
+            location.reload();
+
+        }
+
+
+        function clearCart() {
+
+            localStorage.removeItem("cart");
+
+            location.reload();
+
+        }
+
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GEEKS & YARTS | Products</title>
+
+    <meta name="description"
+        content="Browse products available at GEEKS & YARTS.">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            GEEKS <span>&</span> YARTS
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="cart.html">cart</a>
+        </nav>
+
+    </header>
+
+
+    <!-- PRODUCTS -->
+
+    <section id="products">
+
+        <h2 class="section-title">
+            OUR PRODUCTS
+        </h2>
+
+        <p class="section-description">
+            Explore our collection and choose the products
+            you are interested in.
+        </p>
+
+
+        <div class="products">
+
+
+            <!-- PRODUCT 1 -->
+
+            <div class="product">
+
+                <img src="images/product1.jpg"
+                    alt="Premium Backpack">
+
+                <h3>Premium Backpack</h3>
+
+                <p class="description">
+                    Stylish and practical backpack suitable
+                    for everyday use.
+                </p>
+
+                <p class="price">
+                    $35
+                </p>
+
+                <button onclick="addToCart('Premium Backpack', '$35')">
+                    ORDER NOW
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+
+            <div class="product">
+
+                <img src="images/product2.jpg"
+                    alt="Wireless Headphones">
+
+                <h3>Wireless Headphones</h3>
+
+                <p class="description">
+                    Comfortable wireless headphones for
+                    music and entertainment.
+                </p>
+
+                <p class="price">
+                    $45
+                </p>
+
+                <button onclick="addToCart('Wireless Headphones', '$45')">
+                    ORDER NOW
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+
+            <div class="product">
+
+                <img src="images/product3.jpg"
+                    alt="Smart Watch">
+
+                <h3>Smart Watch</h3>
+
+                <p class="description">
+                    Modern smartwatch designed for everyday use.
+                </p>
+
+                <p class="price">
+                    $55
+                </p>
+
+                <button onclick="addToCart('Smart Watch', '$55')">
+                    ORDER NOW
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCT 4 -->
+
+            <div class="product">
+
+                <img src="images/product4.jpg"
+                    alt="Phone Accessories">
+
+                <h3>Phone Accessories Kit</h3>
+
+                <p class="description">
+                    Useful accessories for your smartphone.
+                </p>
+
+                <p class="price">
+                    $25
+                </p>
+
+                <button onclick="addToCart('Phone Accessories Kit', '$25')">
+                    ORDER NOW
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCT 5 -->
+
+            <div class="product">
+
+                <img src="images/product5.jpg"
+                    alt="Classic Sneakers">
+
+                <h3>Classic Sneakers</h3>
+
+                <p class="description">
+                    Comfortable everyday sneakers with
+                    a modern design.
+                </p>
+
+                <p class="price">
+                    $60
+                </p>
+
+                <button onclick="addToCart('Classic Sneakers', '$60')">
+                    ORDER NOW
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCT 6 -->
+
+            <div class="product">
+
+                <img src="images/product6.jpg"
+                    alt="Urban Fashion Bag">
+
+                <h3>Urban Fashion Bag</h3>
+
+                <p class="description">
+                    Stylish everyday bag suitable for
+                    different occasions.
+                </p>
+
+                <p class="price">
+                    $40
+                </p>
+
+                <button onclick="addToCart('Urban Fashion Bag', '$40')">
+                    ORDER NOW
+                </button>
+
+            </div>
+
+            <div class="product">
+
+                <img src="images/product5.jpg"
+                    alt="Classic Sneakers">
+
+                <h3>Classic Sneakers</h3>
+
+                <p class="description">
+                    Comfortable everyday sneakers with
+                    a modern design.
+                </p>
+
+                <p class="price">
+                    $60
+                </p>
+
+                <button onclick="addToCart('Classic Sneakers', '$60')">
+                    ORDER NOW
+                </button>
+
+            </div>
+
+            <div class="product">
+
+                <img src="images/product5.jpg"
+                    alt="Classic Sneakers">
+
+                <h3>Classic Sneakers</h3>
+
+                <p class="description">
+                    Comfortable everyday sneakers with
+                    a modern design.
+                </p>
+
+                <p class="price">
+                    $60
+                </p>
+
+                <button onclick="addToCart('Classic Sneakers', '$60')">
+                    ORDER NOW
+                </button>
+
+            </div>
+
+            <div class="product">
+
+                <img src="images/product5.jpg"
+                    alt="Classic Sneakers">
+
+                <h3>Classic Sneakers</h3>
+
+                <p class="description">
+                    Comfortable everyday sneakers with
+                    a modern design.
+                </p>
+
+                <p class="price">
+                    $60
+                </p>
+
+                <button onclick="addToCart('Classic Sneakers', '$60')">
+                    ORDER NOW
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="logo">
+            GEEKS <span>&</span> YARTS
+        </div>
+
+        <p>
+            © 2026 GEEKS & YARTS. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ORDER SCRIPT -->
+
+    <script>
+
+        function addToCart(productName, price) {
+
+            var customerName =
+                prompt("Enter your full name:");
+
+            if (!customerName) {
+                return;
+            }
+
+            var phone =
+                prompt("Enter your phone number:");
+
+            if (!phone) {
+                return;
+            }
+
+            var payment =
+                prompt(
+                    "Choose payment method:\n\n" +
+                    "1 - PayPal\n" +
+                    "2 - Cash App\n" +
+                    "3 - Zelle\n" +
+                    "4 - Gift Card\n" +
+                    "5 - Mobile Money\n" +
+                    "6 - Other"
+                );
+
+            if (!payment) {
+                return;
+            }
+
+            var message =
+                "NEW GEEKS & YARTS ORDER\n\n" +
+                "Customer: " + customerName + "\n" +
+                "Phone: " + phone + "\n" +
+                "Product: " + productName + "\n" +
+                "Price: " + price + "\n" +
+                "Payment: " + payment;
+
+            window.location.href =
+                "mailto:geeksyarts.com" +
+                "?subject=New GEEKS & YARTS Order" +
+                "&body=" +
+                encodeURIComponent(message);
+
+        }
+
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
