@@ -266,7 +266,7 @@ section {
 
 .product {
 
-    background-color: rgba(20, 20, 20, 0.644);
+    background-color: rgb(20, 20, 20);
 
     border-radius: 10px;
 
@@ -813,4 +813,12 @@ no-repeat;
 
 .order-section button:hover {
     background-color: #1d4ed8;
+}
+
+.shop-btn {
+    display: inline-block;
+    background: #000;
+    text-decoration:  whiite;
+    padding: 15px 30px;
+    border-radius: 5px;
 }
