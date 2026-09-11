@@ -825,17 +825,6 @@ no-repeat;
 
 .products {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 20px;
-}
-.products .product {
-    width: 100%;
-    overflow: hidden;
-}
-
-.products .product img {
-    width: 100% !important;
-    height: 180% !important;
-    object-fit: cover !important;
-    display: block;
 }
