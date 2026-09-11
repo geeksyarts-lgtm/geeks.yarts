@@ -13,7 +13,10 @@ function addToCart(name, price) {
 
     localStorage.setItem("cart", JSON.stringify(cart));
 
+   
     alert(name + " has been added to your cart!");
+
+    
 }
 
 function displayCart() {
@@ -21,7 +24,6 @@ function displayCart() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     let cartContainer = document.getElementById("cart-items");
-    let total = 0;
 
     cartContainer.innerHTML = "";
 
@@ -40,8 +42,10 @@ function displayCart() {
         `;
     });
 
-    document.getElementById("cart-total").innerHTML =
-        "Total: $" + total;
+    // document.getElementById("cart-total").innerHTML =
+    //     "Total: $" + total;
+
+   
 }
 
 function removeFromCart(index) {

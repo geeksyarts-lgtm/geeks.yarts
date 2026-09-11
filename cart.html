@@ -45,7 +45,7 @@
 
             <div id="cart-items"></div>
 
-            <h3 id="cart-total">
+            <h3">
                 <p>Total products: <span id="product-count">0</span></p>
             </h3>
            
@@ -127,11 +127,17 @@
 
             });
 
+            
+         let totalP = document.getElementById("product-count");
+    totalP.innerHTML = cart.length;
+
         }
 
 
         cartTotal.innerHTML =
             "Total: $" + total.toFixed(2);
+
+
 
 
         function removeItem(index) {
