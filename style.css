@@ -734,10 +734,10 @@ no-repeat;
 }
 
 .product img {
-    width: 100%;
-    height: 180px;
+    width: 90%;
+    height: 100px;
     object-fit: cover;
-    display: block;
+    border-radius: 8px;
 }
 .product h3 {
     font-size: 16px;
@@ -825,6 +825,22 @@ no-repeat;
 
 .products {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    width: 100%;
+}
+
+/* ALL PRODUCTS CARDS*/
+.product {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* ALL PRODUCTS CARDS IMAGE */
+.product img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
 }
