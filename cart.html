@@ -53,6 +53,9 @@
             <h3 id="cart-total">
                 Total: $0
             </h3>
+           
+            <h4>carts</h4>
+            <p>Total products: <span id="product-count">0</span></p>
 
             <input type="email"
             id="customer-emmail"
@@ -168,6 +171,12 @@
 
     <script src="script.js"></script>
 
+    <script>
+        let cart =
+        JSON.parse(localStorage.getItem("cart")) || [];
+
+        document.getElementById("cart-count").textContent = cart.length;
+    </script>
 </body>
 
 </html>

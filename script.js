@@ -8,6 +8,10 @@ function addToCart(name, price) {
         price: price
     });
 
+    let cartContainer = document.getElementById("addToCart");
+
+    cartContainer.innerHTML = "Cart(1)";
+
     localStorage.setItem("cart", JSON.stringify(cart));
 
     alert(name + " has been added to your cart!");
@@ -95,7 +99,6 @@ function placeOrder() {
 
     alert("Your order has been prepared!");
 
-    // Temporary email option
     window.location.href =
         "mailto:YOUR-EMAIL@example.com?subject=New Geeks & Yarts Order&body=" + orderDetails;
 }
