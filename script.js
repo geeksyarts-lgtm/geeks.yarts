@@ -1,4 +1,3 @@
-// ADD PRODUCT TO CART
 function addToCart(name, price) {
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -17,8 +16,6 @@ function addToCart(name, price) {
     alert(name + " has been added to your cart!");
 }
 
-
-// DISPLAY PRODUCTS IN CART
 function displayCart() {
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -47,8 +44,6 @@ function displayCart() {
         "Total: $" + total;
 }
 
-
-// REMOVE PRODUCT FROM CART
 function removeFromCart(index) {
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];

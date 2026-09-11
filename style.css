@@ -830,13 +830,12 @@ no-repeat;
     width: 100%;
 }
 
-/* ALL PRODUCTS CARDS*/
 .product {
     width: 100%;
     box-sizing: border-box;
     overflow: hidden;
 }
-/* PRODUCT IMAGE */
+
 .product img {  
     width: 100%;
     height: 200px;
